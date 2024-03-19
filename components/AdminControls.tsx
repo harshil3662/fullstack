@@ -24,7 +24,7 @@ function AdminControls() {
         const notification = toast.loading("Picking a Lucky Winner...");
 
         try {
-            const data = await DrawWinnerTicket([{}]);
+            const data = await DrawWinnerTicket();
 
             toast.success("Winner Picked!", {
                 id: notification,
@@ -46,7 +46,7 @@ function AdminControls() {
         const notification = toast.loading("Withdrawing the commission...");
 
         try {
-            const data = await WithdrawCommission([{}]);
+            const data = await WithdrawCommission();
 
             toast.success("Commission has been withdrawn successfully!", {
                 id: notification,
@@ -68,7 +68,7 @@ function AdminControls() {
         const notification = toast.loading("Restarting the draw...");
 
         try {
-            const data = await restartDraw([{}]);
+            const data = await restartDraw();
 
             toast.success("Draw restarted successfully!", {
                 id: notification,
@@ -90,7 +90,7 @@ function AdminControls() {
         const notification = toast.loading("Refunding all...");
 
         try {
-            const data = await RefundAll([{}]);
+            const data = await RefundAll();
 
             toast.success("All refunded successfully!", {
                 id: notification,
